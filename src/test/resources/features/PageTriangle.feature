@@ -18,3 +18,5 @@ Feature: Triangle classification
     | 4     | 5     | 6     | scalene         |
     | 1     | 2     | 10    | Not a Triangle  |
     | -1    | 2-    | 10    | Not a Triangle  |
+    | S     | K     |       | Not a Triangle  |
+    | @     | +´}   |>      | Not a Triangle  |
