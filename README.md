@@ -26,6 +26,7 @@ El escenario definido en el proyecto mediante Scenario Outline permite cubrir pr
 
 
 ## **NOTA**
+- Se dejo un workflow en github Action 
 ### Parece que bloqueé o saturé la página de pruebas. Actualmente ya no me carga en ningún dispositivo. 😕
 - Capturea:
 https://prnt.sc/lqv7Npd4MerZ
