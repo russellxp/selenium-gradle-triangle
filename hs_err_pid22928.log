@@ -1,0 +1,239 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 117440512 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3686), pid=22928, tid=14984
+#
+# JRE version:  (21.0.7+6) (build )
+# Java VM: OpenJDK 64-Bit Server VM (21.0.7+6-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 52973 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -testNameFile C:\Users\russe\AppData\Local\Temp\testNames15227692362111142385.txt
+
+Host: AMD Ryzen 7 3700U with Radeon Vega Mobile Gfx  , 8 cores, 6G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5794)
+Time: Fri May 30 05:21:44 2025 Hora est. Pacífico, Sudamérica elapsed time: 0.019112 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002018a4c3f20):  JavaThread "Unknown thread" [_thread_in_vm, id=14984, stack(0x000000b49ee00000,0x000000b49ef00000) (1024K)]
+
+Stack: [0x000000b49ee00000,0x000000b49ef00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6ce119]
+V  [jvm.dll+0x8a84a1]
+V  [jvm.dll+0x8aa9ce]
+V  [jvm.dll+0x8ab0b3]
+V  [jvm.dll+0x27f8a6]
+V  [jvm.dll+0x6ca945]
+V  [jvm.dll+0x6bebea]
+V  [jvm.dll+0x355eca]
+V  [jvm.dll+0x35da96]
+V  [jvm.dll+0x3af72e]
+V  [jvm.dll+0x3af9d8]
+V  [jvm.dll+0x32a05c]
+V  [jvm.dll+0x32abbb]
+V  [jvm.dll+0x871719]
+V  [jvm.dll+0x3bc501]
+V  [jvm.dll+0x85a743]
+V  [jvm.dll+0x45080e]
+V  [jvm.dll+0x452451]
+C  [jli.dll+0x5278]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffc0905a0c8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x000002018c8183b0 WorkerThread "GC Thread#0"                     [id=2704, stack(0x000000b49ef00000,0x000000b49f000000) (1024K)]
+  0x000002018c827250 ConcurrentGCThread "G1 Main Marker"            [id=24536, stack(0x000000b49f000000,0x000000b49f100000) (1024K)]
+  0x000002018c829810 WorkerThread "G1 Conc#0"                       [id=23296, stack(0x000000b49f100000,0x000000b49f200000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc0875c987]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffc090ce408] Heap_lock - owner thread: 0x000002018a4c3f20
+
+Heap address: 0x0000000091000000, size: 1776 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000091000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc08b47949]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.010 Loaded shared library C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff74cc80000 - 0x00007ff74cc8e000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\java.exe
+0x00007ffc4a850000 - 0x00007ffc4aa48000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc49e80000 - 0x00007ffc49f42000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc47ef0000 - 0x00007ffc481e6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc484a0000 - 0x00007ffc485a0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc2c1d0000 - 0x00007ffc2c1ee000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\VCRUNTIME140.dll
+0x00007ffc2bb20000 - 0x00007ffc2bb38000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\jli.dll
+0x00007ffc49fb0000 - 0x00007ffc4a14d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc481f0000 - 0x00007ffc48212000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc2f820000 - 0x00007ffc2faba000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.5794_none_60bcd33171f2783c\COMCTL32.dll
+0x00007ffc4a290000 - 0x00007ffc4a2bb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc491a0000 - 0x00007ffc4923e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc48220000 - 0x00007ffc4833a000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc485a0000 - 0x00007ffc4863d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc49460000 - 0x00007ffc4948f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc3f4a0000 - 0x00007ffc3f4ac000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\vcruntime140_1.dll
+0x00007ffc24e60000 - 0x00007ffc24eed000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\msvcp140.dll
+0x00007ffc08420000 - 0x00007ffc091b0000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\server\jvm.dll
+0x00007ffc4a2d0000 - 0x00007ffc4a37f000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc49490000 - 0x00007ffc4952f000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc492a0000 - 0x00007ffc493c3000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc48800000 - 0x00007ffc48827000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffc49530000 - 0x00007ffc4959b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc47d50000 - 0x00007ffc47d9b000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffc3c510000 - 0x00007ffc3c537000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc3fed0000 - 0x00007ffc3feda000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc47d30000 - 0x00007ffc47d42000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffc466d0000 - 0x00007ffc466e2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc3f4b0000 - 0x00007ffc3f4ba000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\jimage.dll
+0x00007ffc45f00000 - 0x00007ffc46101000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffc33fb0000 - 0x00007ffc33fe4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffc486c0000 - 0x00007ffc48742000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc2b940000 - 0x00007ffc2b95f000 	C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.5794_none_60bcd33171f2783c;C:\Users\russe\.gradle\jdks\eclipse_adoptium-21-amd64-windows\jdk-21.0.7+6\bin\server
+
+VM Arguments:
+jvm_args: -ea -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 52973 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -testNameFile C:\Users\russe\AppData\Local\Temp\testNames15227692362111142385.txt
+java_class_path (initial): d:\workspace\seleniumRetoGradle\build\resources\test;d:\workspace\seleniumRetoGradle\build\classes\java\test;\seleniumRetoGradle\build\resources\main;\seleniumRetoGradle\build\classes\java\main;\seleniumRetoGradle\bin;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.50.0\ad69f784c48db4bdc216f90fddead6c7e26b0727\opentelemetry-sdk-extension-autoconfigure-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-edge-driver\4.33.0\857a5156af7d592457a682ceefd726d562d7ccb3\selenium-edge-driver-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\docstring\7.22.2\ecd8d714c6cd03113d17a139ea0eae90e52d4d52\docstring-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents.core5\httpcore5\5.3.4\ea47f0fe6e00ffb07cec3a0cb1bb801b1a9cc353\httpcore5-5.3.4.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-exporter-logging\1.50.0\f346b37a6c02428fc4606a089566c87ad82dc211\opentelemetry-exporter-logging-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-remote-driver\4.33.0\22424dd246722763a35623d94f7a2b0299bfa5de\selenium-remote-driver-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.brotli\dec\0.1.2\c26a897ae0d524809eef1c786cc6183b4ddcc3b\dec-0.1.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.google.auto.service\auto-service-annotations\1.1.1\da12a15cd058ba90a0ff55357fb521161af4736d\auto-service-annotations-1.1.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents.client5\httpclient5\5.4.3\2f3fc0687c6fa39b0aad7cf7c3cf171ec8ad009b\httpclient5-5.4.3.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.github.docker-java\docker-java-api\3.5.0\78037106c9b6bcba4097dc984a7d69a57ca2c4f3\docker-java-api-3.5.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-common\1.50.0\928c43d75cd0675070d38d041973370823d6face\opentelemetry-sdk-common-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.apiguardian\apiguardian-api\1.1.2\a231e0d844d2721b0fa1b238006d15c6ded6842a\apiguardian-api-1.1.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\gherkin\32.1.1\e95e1107e8a888c60703385cca7d56c953ced65\gherkin-32.1.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\messages\27.2.0\eb0063e66198cc08b7b1f826c79a5b9bd1c749ba\messages-27.2.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-manager\4.33.0\110b0565298889ab4f971b29dfc00b775c3c062\selenium-manager-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents.core5\httpcore5-h2\5.3.4\3742a9a9ba3a5a0d45be230093b52a1302a561e2\httpcore5-h2-5.3.4.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-trace\1.50.0\19d60d3b72aa2d0d89a02361eedf7157ecc1fc7d\opentelemetry-sdk-trace-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.18.3\7fa21cf7da4598f8240e4ebd9779249622af1acd\jackson-annotations-2.18.3.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-exec\1.4.0\e9061b21958bfaf1cb736eb22e36cbf02d8fe9f\commons-exec-1.4.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.17.0\33d12735bef894440780fce64f9758d420c7bae2\jna-5.17.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-firefox-driver\4.33.0\6f15b600b055f2cee61600c0efdfbfa848b9d1a8\selenium-firefox-driver-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\junit-xml-formatter\0.7.1\2a406c203ed0ec6daeff37f0c64d9f3d2d90ee1d\junit-xml-formatter-0.7.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\html-formatter\21.10.1\35d5ed1eba642e6508584192ebcbde71d4d8033\html-formatter-21.10.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-gherkin\7.22.2\74bed4bd29bee14e18c2cc21c39c9ec0fbb5c52c\cucumber-gherkin-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-expressions\18.0.1\fdf6f4082fbfa0be8fae0c4b6a5df1f54a16d06a\cucumber-expressions-18.0.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\ci-environment\10.0.1\222cecc535529f093d3364856bfe5f8d343c4248\ci-environment-10.0.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.github.docker-java\docker-java-transport\3.5.0\29a3e6d25149e9f30b7baf6f3fe9bf99ed314197\docker-java-transport-3.5.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\datatable\7.22.2\79e85d9949d45596214e8b146fb3b6f9f80a1081\datatable-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-json\4.33.0\29358392fe46e47a9b12411cb8ab4376af1d0f68\selenium-json-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.18.3\78f80c259268200e588aa204dd97ecf09b76916e\jackson-core-2.18.3.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v135\4.33.0\ec829d09c9f4e5ca36bf94323ba373d58bbaf7d0\selenium-devtools-v135-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\3.0.0\7399e65dd7e9ff3404f4535b2f017093bdb134c7\j2objc-annotations-3.0.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-os\4.33.0\2e7ab2c1b46c9002de68078fae3bbba8aeefb9e9\selenium-os-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-java\4.33.0\2cc38c8dbef9d6e8774f05c2d2e8088180858ed4\selenium-java-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v137\4.33.0\56e572bb614ee9a0ad1f49ab5e474c7eb231f74d\selenium-devtools-v137-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-gherkin-messages\7.22.2\d51106eba74f7952fb9c060b4f2927488b001ce4\cucumber-gherkin-messages-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna-platform\5.13.0\88e9a306715e9379f3122415ef4ae759a352640d\jna-platform-5.13.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.github.bonigarcia\webdrivermanager\6.1.0\b0c34f9ade1be1389ed20196e4a43dfa6bb67b5e\webdrivermanager-6.1.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.37.0\8512660d1269d166fad497f51de35da61447f063\error_prone_annotations-2.37.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-logs\1.50.0\fb7ace15eca8878a2c3cf86320ed1d2fd1c0f206\opentelemetry-sdk-logs-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.50.0\47676b3c16db83a30b002d0e9cd9e6405236dd21\opentelemetry-sdk-extension-autoconfigure-spi-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.18.3\537e3886263e3b3464385040453e92567fd509e2\jackson-databind-2.18.3.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\tag-expressions\6.1.2\bae142d395be75805a7a078d4634b9833be3c4a\tag-expressions-6.1.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.27.1\a19151084758e2fbb6b41eddaa88e7b8ff4e6599\commons-compress-1.27.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-chrome-driver\4.33.0\87ac9f66aee4901425b84d4e6d093f5a2ffb17f2\selenium-chrome-driver-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-safari-driver\4.33.0\89b52b82d62d7ee129b3242e93cf9aee8b05daed\selenium-safari-driver-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.30\cd92524ea19d27e5b94ecd251e1af729cffdfe15\jcl-over-slf4j-1.7.30.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\33.4.8-jre\e70a3268e6cd3e7d458aa15787ce6811c34e96ae\guava-33.4.8-jre.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.17.0\b17d2136f0460dcc0d2016ceefca8723bdf4ee70\commons-lang3-3.17.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy\1.17.5\88450f120903b7e72470462cdbd2b75a3842223c\byte-buddy-1.17.5.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.13.0\111ac98ad3d2d099d81d53b0549748144a8d2659\gson-2.13.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.17\d9e58ac9c7779ba3bf8142aff6c830617a7fe60f\slf4j-api-2.0.17.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk-metrics\1.50.0\49432de0171798f671bda82bf7eef6ae283b3b7d\opentelemetry-sdk-metrics-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-http\4.33.0\8e72bf24c45ea591faf205ca7323339a0ab0c164\selenium-http-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-devtools-v136\4.33.0\781a3fdfb26cffed529801b8a329c9557a5a3c97\selenium-devtools-v136-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.github.docker-java\docker-java-core\3.5.0\f8fd4ab4793aa8f7e9127246d7daceb7affee134\docker-java-core-3.5.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-java\7.22.2\fe4af5b15280792f64ac2aafcaae27345f265ca7\cucumber-java-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-api\1.50.0\83a69114c56ff2664d21906c62431bceb1c294ed\opentelemetry-api-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-sdk\1.50.0\1c6ffdd0bf5a3e42154912f0ab1b1bbd73499af1\opentelemetry-sdk-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\testng-xml-formatter\0.3.1\501cd1cde0c77fbaeeec7d62e2cb82a2d59ec331\testng-xml-formatter-0.3.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-api\4.33.0\8805e9fe7b20f4e325ca392d0e869482cf977d0e\selenium-api-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.17.1\973638b7149d333563584137ebf13a691bb60579\commons-codec-1.17.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.github.docker-java\docker-java\3.5.0\8dffe9792c9820a08ca04e718faa0c54cbba5848\docker-java-3.5.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.3\aeaffd00d57023a2c947393ed251f0354f0985fc\failureaccess-1.0.3.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-chromium-driver\4.33.0\30ba14ad6df821a5ee1ed691fbe04d2e3ea2df3b\selenium-chromium-driver-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\query\13.2.0\3873a8628910ac0d45fe2833501cb88bd63fb141\query-13.2.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-core\7.22.2\2152cfef996ff229e66c4d38e3917502b9d16332\cucumber-core-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\com.github.docker-java\docker-java-transport-httpclient5\3.5.0\27f2189237b5a831a36f7acce6350b6bc50c223a\docker-java-transport-httpclient5-3.5.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.18.0\44084ef756763795b31c578403dd028ff4a22950\commons-io-2.18.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.opentelemetry\opentelemetry-context\1.50.0\dcdc20a193e82d66ecf5a1a978a799bc19e9b210\opentelemetry-context-1.50.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.jspecify\jspecify\1.0.0\7425a601c1c7ec76645a78d22b8c6a627edee507\jspecify-1.0.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-ie-driver\4.33.0\f0609e34b70675495c1ed9859630e9d68b6ce7fc\selenium-ie-driver-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-support\4.33.0\4994820bf2866e5407afcb89e721bfba38a836fa\selenium-support-4.33.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-plugin\7.22.2\985ec0b57ef0168f354e8f05149d6596ce1645b4\cucumber-plugin-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\io.cucumber\cucumber-junit\7.22.2\c43f8a347fee2294a5e9cd80f2af2644c2ea8178\cucumber-junit-7.22.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.10.0\d533ff2c286eaf963566f92baf5f8a06628d2609\junit-platform-commons-1.10.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.opentest4j\opentest4j\1.3.0\152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e\opentest4j-1.3.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.10.0\2fe4ba3d31d5067878e468c96aa039005a9134d3\junit-jupiter-api-5.10.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-engine\5.10.0\90587932d718fc51a48112d33045a18476c542ad\junit-jupiter-engine-5.10.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-engine\1.10.0\276c4edcf64fabb5a139fa7b4f99330d7a93b804\junit-platform-engine-1.10.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\junit\junit\4.13.2\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\junit-4.13.2.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.webjars\jquery\3.7.1\42088e652462c40a369b64d87e18e825644acfab\jquery-3.7.1.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.jcommander\jcommander\1.83\c342a2ad17ec08db105146e27c7ba9c535c9bb46\jcommander-1.83.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter\5.10.0\8fea1d9c58b2156f1b998f2f18da04bc9e087f74\junit-jupiter-5.10.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.testng\testng\7.11.0\c75ee639e6fc9c0a406d32608d532d9ee9341941\testng-7.11.0.jar;c:\Users\russe\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-params\5.10.0\9041c7365495a897a64782ea5a6fdb99dab1814e\junit-jupiter-params-5.10.0.jar;c:\Users\russe\AppData\Roaming\Code\User\globalStorage\redhat.java\1.42.0\config_win\org.eclipse.osgi\113\0\.cp;c:\Users\russe\AppData\Roaming\Code\User\globalStorage\redhat.java\1.42.0\config_win\org.eclipse.osgi\56\0\.cp
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 117440512                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1862270976                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 1862270976                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Java\jre1.8.0_271\bin;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\PuTTY\;D:\Archivo de programas\Microsoft VS Code\bin;C:\gradle-8.14.1\bin;%JAVA_HOME%\bin;C:\Users\russe\AppData\Local\Android\Sdk\platform-tools;C:\Users\russe\AppData\Local\Android\Sdk\tools;C:\Users\russe\AppData\Local\Android\Sdk\build-tools;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\gradle-8.14.1\bin;C:\Program Files\dotnet\;D:\Archivo de programas\nodejs\;C:\Users\russe\.console-ninja\.bin;C:\Users\russe\AppData\Local\Microsoft\WindowsApps;;D:\Archivo de programas\IntelliJ IDEA Community Edition 2021.1\bin;C:\Users\russe\AppData\Roaming\npm
+USERNAME=russe
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+TMP=C:\Users\russe\AppData\Local\Temp
+TEMP=C:\Users\russe\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5794)
+OS uptime: 0 days 13:54 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (8 cores per cpu, 2 threads per core) family 23 model 24 stepping 1 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, hv, rdtscp, f16c
+Processor Information for the first 8 processors :
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+
+Memory: 4k page, system-wide physical 7103M (355M free)
+TotalPageFile size 28607M (AvailPageFile size 62M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 172M
+
+vm_info: OpenJDK 64-Bit Server VM (21.0.7+6-LTS) for windows-amd64 JRE (21.0.7+6-LTS), built on 2025-04-15T00:00:00Z by "admin" with MS VC++ 17.7 (VS2022)
+
+END.

@@ -1,0 +1,11 @@
+# Gradle files
+.gradle/
+build/
+
+# IDE files
+*.iml
+.idea/
+.vscode/
+
+# Windows
+Thumbs.db
