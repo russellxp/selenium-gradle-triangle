@@ -17,3 +17,4 @@ Feature: Triangle classification
     | 3     | 3     | 3     | equilateral     |
     | 4     | 5     | 6     | scalene         |
     | 1     | 2     | 10    | Not a Triangle  |
+    | -1    | 2-    | 10    | Not a Triangle  |
